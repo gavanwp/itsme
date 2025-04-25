@@ -1,0 +1,235 @@
+/*
+* Portfolio Website - Responsive Styles
+* Viewport breakpoints for different devices
+*/
+
+/* Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+    :root {
+        --container-width: 960px;
+    }
+    
+    .home-section {
+        min-height: 90vh;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+    
+    .img-container {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+/* Medium devices (tablets, 992px and down) */
+@media (max-width: 992px) {
+    :root {
+        --container-width: 720px;
+        --section-padding: 80px 0;
+        --header-height: 70px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.6rem;
+    }
+    
+    .typing-text {
+        font-size: 1.3rem;
+    }
+    
+    .about-section .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .about-img, .about-text {
+        flex: none;
+        width: 100%;
+    }
+    
+    .about-img {
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin-bottom: 40px;
+    }
+    
+    .projects-grid, .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Small devices (landscape phones, 768px and down) */
+@media (max-width: 768px) {
+    :root {
+        --container-width: 540px;
+        --section-padding: 60px 0;
+        --header-height: 60px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.4rem;
+    }
+    
+    .typing-text {
+        font-size: 1.1rem;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: var(--header-height);
+        left: -100%;
+        flex-direction: column;
+        background: var(--glass-bg);
+        backdrop-filter: blur(10px);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--glass-shadow);
+        height: calc(100vh - var(--header-height));
+        padding: 20px 0;
+        z-index: 999;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        margin: 15px 0;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .about-details {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero-buttons, .about-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .projects-grid, .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-form {
+        order: -1;
+    }
+}
+
+/* Extra small devices (portrait phones, 576px and down) */
+@media (max-width: 576px) {
+    :root {
+        --container-width: 100%;
+        --section-padding: 50px 0;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.6rem;
+    }
+    
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+    
+    .typing-text {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        margin-bottom: 30px;
+    }
+    
+    .img-container {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .filter-buttons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .filter-btn {
+        margin-bottom: 10px;
+    }
+    
+    .skill-card {
+        padding: 20px;
+    }
+    
+    .back-to-top {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+}
