@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - Photo Gallery</title>
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="header-content">
+        <h1>Welcome, Shumii!</h1>
+        <button id="logout-button" class="logout-button">
+          <span class="logout-icon">←️</span>
+          Logout
+        </button>
+      </div>
+    </header>
+    
+    <main class="dashboard-main">
+      <div class="gallery-header">
+        <h2>Your Gallery</h2>
+        <p>Explore your beautiful photo collection.</p>
+      </div>
+      
+      <div id="photo-gallery" class="photo-gallery">
+        <!-- Photos will be loaded here dynamically with JavaScript -->
+        <div class="loading-indicator">
+          <div class="spinner"></div>
+          <p>Loading your photos...</p>
+        </div>
+      </div>
+      
+      <div class="gallery-actions">
+        <button class="add-photo-button">
+          <span class="add-icon">+</span>
+          Add New Photos
+        </button>
+      </div>
+    </main>
+    
+    <footer class="dashboard-footer">
+      <p>&copy; <span id="current-year"></span> Shumii's Gallery. All rights reserved.</p>
+    </footer>
+  </div>
+  
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
